@@ -32,6 +32,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Install BiocManager
 RUN R -e "install.packages('BiocManager', repos='https://cloud.r-project.org/')"
 
+# Install remotes package (required for GitHub installations)
+RUN R -e "BiocManager::install('remotes', ask=FALSE, update=TRUE)"
+
 # Install HPOExplorer and its dependencies
 # This will pull from the latest GitHub release or use BiocManager
 RUN R -e "BiocManager::install('neurogenomics/HPOExplorer', ask=FALSE, update=TRUE)"
