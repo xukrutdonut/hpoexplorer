@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  hpoexplorer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: hpoexplorer:latest
+    container_name: hpoexplorer-rstudio
+    ports:
+      - "8900:8787"
+    environment:
+      - ROOT=true
+      - PASSWORD=hpoexplorer
+      - USERID=${USERID:-1000}
+      - GROUPID=${GROUPID:-1000}
+    volumes:
+      # Mount your data directories here
+      - ./data:/home/rstudio/data
+      - ./projects:/home/rstudio/projects
+    restart: unless-stopped
+    # Resource limits for Raspberry Pi 5
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+        reservations:
+          memory: 2G

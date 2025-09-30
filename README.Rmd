@@ -54,7 +54,11 @@ A quick tutorial on how to get started with `HPOExplorer`.
 Click
 [here](https://neurogenomics.github.io/HPOExplorer/articles/docker.html)
 for instructions on how to create a Docker or Singularity
-container with `HPOExplorer` and Rstudio pre-installed. 
+container with `HPOExplorer` and Rstudio pre-installed.
+
+#### Raspberry Pi 5 Support
+
+For Raspberry Pi 5 (ARM64) installation, see the [Raspberry Pi 5 Installation Guide](https://github.com/neurogenomics/HPOExplorer/blob/master/README_RPI5.md). 
 
 # Citation
 
