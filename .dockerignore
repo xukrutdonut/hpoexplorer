@@ -1,0 +1,30 @@
+# Git files
+.git
+.gitignore
+.github
+
+# R files
+.Rhistory
+.RData
+.Rproj.user
+*.Rproj
+
+# Build artifacts
+*.o
+*.so
+*.dll
+
+# Documentation
+docs/
+man/
+vignettes/*.html
+vignettes/*.pdf
+
+# Tests
+tests/
+
+# Other
+.DS_Store
+*.log
+tmp/
+temp/

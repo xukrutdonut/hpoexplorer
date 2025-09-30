@@ -78,7 +78,27 @@ docker run \
 which means it will persist even after you've closed your command line session.  
 * The username will be *"rstudio"* by default.  
 * Optionally, you can also install the [Docker Desktop](https://www.docker.com/products/docker-desktop/) 
-to easily manage your containers.  
+to easily manage your containers.
+
+### Raspberry Pi 5 Installation
+
+For Raspberry Pi 5 (ARM64) users, HPOExplorer provides a dedicated Dockerfile and docker-compose configuration. 
+See the [Raspberry Pi 5 Installation Guide](https://github.com/neurogenomics/HPOExplorer/blob/master/README_RPI5.md) 
+for detailed instructions in Spanish/English.
+
+Quick start on Raspberry Pi 5:
+
+```bash
+# Clone the repository or download the files
+git clone https://github.com/neurogenomics/HPOExplorer.git
+cd HPOExplorer
+
+# Build and run using docker-compose
+docker compose build
+docker compose up -d
+```
+
+Access RStudio at `http://<your_rpi_ip>:8900` with username `rstudio` and the password configured in `docker-compose.yml`.  
 
 ## Method 2: via Singularity
 
